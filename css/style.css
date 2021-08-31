@@ -1,0 +1,83 @@
+body {
+	background-image: url('../images/galactic-dark.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	font-family: 'Poppins', sans-serif;
+}
+header h1 {
+	font-size: 44px;
+	color: transparent;
+    -webkit-text-stroke-width: 0.2px;
+    -webkit-text-stroke-color: #ffffff;
+	font-weight: bold;
+}
+main {
+	min-height: 50vh;
+	padding-bottom: 170px;
+}
+/**
+* Search input
+*/
+.input-group {
+	width: clamp(30%, 400px, 100%);
+}
+/**
+* Search result
+*/
+.location img {
+	height: 40px;
+}
+.location .date {
+	font-size: 18px;
+	font-weight: normal;
+}
+.status-image {
+	height: 100px;
+}
+.status-image img {
+	max-height: 100%;
+	max-width: unset;
+	width: auto;
+}
+.temperature {
+	font-size: 40px;
+}
+.temperature img {
+	height: 60px;
+}
+.extra-info {
+	background: rgba(20, 20, 20, 0.5);
+	border: 1px solid #777;
+	border-radius: 10px;
+	width: clamp(30%, 600px, 100%);
+	margin: 10px auto 0;
+	text-align: center;
+}
+.extra-info > p {
+	display: inline-flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	display: inline-block;
+	margin: 0;
+	padding: 4px 10px;
+	font-size: 15px;
+	line-height: 1;
+}
+.label img {
+	height: 24px;
+}
+.data-notice {
+	font-size: clamp(12px, 14px, 15px);
+	margin-bottom: -1px;
+}
+/**
+* Footer
+*/
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: rgba(72, 61, 139, 0.95);
+    z-index: 9;
+}
