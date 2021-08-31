@@ -5,22 +5,24 @@ const searchWeather = async () => {
 
 	if (searchText == '') {
 		displayErrorNotice('Please type something to search.');
-	} else {
+	}
+	else {
 		document.getElementById('error_notice').textContent = '';
 		document.getElementById('weather_info').textContent = '';
-		const url = `https://api.openweathermap.org/data/2.5/weather?q=${searchText}&appid=0c4ef1b4f6592cb29a883e80055fa44a&units=metric`;
+		const url = `https://api.openweathermap.org/data/2.5/weather?q=${searchText}&appid=731446eadd5112b9009ad9aeec4cdd81&units=metric`;
 		try {
 			const res = await fetch(url);
 			const data = await res.json();
 			showWeatherDetails(data);
-		} catch (err) {
+		}
+		catch (err) {
 			displayErrorNotice();
 			console.log(err);
 		}
 	}
 };
 
-// trigger search on pressing the Enter key
+//search by pressing the Enter key
 document.getElementById('search_input').addEventListener('keyup', function (e) {
 	let key = e.key || e.code || e.keyCode;
 	if (key === 'Enter' || key === 13) {
@@ -38,8 +40,7 @@ const displayErrorNotice = (errorMessage = 'Something went wrong. Try again late
 
 // show weather details
 const showWeatherDetails = location => {
-	console.log(location);
-	// const currentDate = new Date().toLocaleString('en-US', { day: 'numeric', month: 'short', year: 'numeric' });
+	//console.log(location);
 	const localDate = convertUnixTimeToLocal(location.dt);
 	const sunriseTime = convertUnixTimeToLocal(location.sys.sunrise);
 	const sunsetTime = convertUnixTimeToLocal(location.sys.sunset);
